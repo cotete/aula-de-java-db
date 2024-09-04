@@ -6,18 +6,19 @@ import br.com.fiap.dto.Carro;
 
 import java.sql.Connection;
 
-public class TesteCreate {
+public class testeDelete {
     public static void main(String[] args) {
+
+
         Connection con = ConnectionFactory.abrirConexao();
+
         Carro carro = new Carro();
-        carro.setCor("azul");
-        carro.setPlaca("JKK1903");
-        carro.setDescricao("celta");
 
-        CarroDAO carroDAO = new CarroDAO(con);
-        System.out.println(carroDAO.inserir(carro));
+        carro.setPlaca("JKK1900");
 
+        CarroDAO dao = new CarroDAO(con);
 
+        System.out.println(dao.excluir(carro));
 
 
 
