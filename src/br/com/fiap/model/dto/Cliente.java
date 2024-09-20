@@ -1,8 +1,9 @@
-package br.com.fiap.dto;
+package br.com.fiap.model.dto;
 
 public class Cliente {
-    private String nomeCliente, placa;
     private int idCliente;
+    private String nomeCLiente;
+    private String placa;
 
     public Cliente() {
     }
@@ -15,12 +16,12 @@ public class Cliente {
         this.idCliente = idCliente;
     }
 
-    public String getNomeCliente() {
-        return nomeCliente;
+    public String getNomeCLiente() {
+        return nomeCLiente;
     }
 
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
+    public void setNomeCLiente(String nomeCLiente) {
+        this.nomeCLiente = nomeCLiente;
     }
 
     public String getPlaca() {

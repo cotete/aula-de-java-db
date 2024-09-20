@@ -1,11 +1,10 @@
-package br.com.fiap.main;
+package br.com.fiap.model.main;
 
-import br.com.fiap.dao.CarroDAO;
-import br.com.fiap.dao.ConnectionFactory;
-import br.com.fiap.dto.Carro;
+import br.com.fiap.model.dao.CarroDAO;
+import br.com.fiap.model.factory.ConnectionFactory;
+import br.com.fiap.model.dto.Carro;
 
 import java.sql.Connection;
-import java.util.ArrayList;
 
 public class TesteRead {
     public static void main(String[] args) {

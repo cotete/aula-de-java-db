@@ -1,4 +1,4 @@
-package br.com.fiap.dto;
+package br.com.fiap.model.dto;
 
 public class Carro {
     private String placa, cor, descricao;

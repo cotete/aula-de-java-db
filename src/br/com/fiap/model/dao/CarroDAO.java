@@ -1,8 +1,7 @@
-package br.com.fiap.dao;
+package br.com.fiap.model.dao;
 
-import br.com.fiap.dto.Carro;
+import br.com.fiap.model.dto.Carro;
 
-import java.rmi.UnexpectedException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -105,7 +104,7 @@ public class CarroDAO {
             return null;
         }
     }
-        public Carro listarEspecifico(Carro carro) {
+        public String listarEspecifico(Carro carro) {
             String sql = "select * from ddd_carro where placa=?";
             try (PreparedStatement ps = getCon().prepareStatement(sql);) {
                 ps.setString(1, carro.getPlaca());
@@ -114,7 +113,8 @@ public class CarroDAO {
                     carro.setPlaca(rs.getString(1));
                     carro.setCor(rs.getString(2));
                     carro.setDescricao(rs.getString(3));
-                    return carro;
+                    String resultado = "Carro: "+carro.getDescricao()+"Cor: "+carro.getCor()+"placa: "+carro.getPlaca();
+                    return resultado;
                 } else {
                     return null;
                 }

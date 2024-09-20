@@ -1,4 +1,4 @@
-package br.com.fiap.dao;
+package br.com.fiap.model.factory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
